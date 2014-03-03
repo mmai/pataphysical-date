@@ -30,7 +30,7 @@ pataphysical-date is available as a bower package :
 ```bower install pataphysical-date```
 
 ```html
-<script src="bower-components/pataphysical-date/PataphysicalDate.js"></script>
+<script src="bower_components/pataphysical-date/PataphysicalDate.js"></script>
 ```
 
 ###Command line
