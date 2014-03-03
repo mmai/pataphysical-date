@@ -5,4 +5,4 @@
 require('../PataphysicalDate.js');
 
 var now = new PataphysicalDate();
-console.log(now.toString());
+console.log(now.toString() + " [" + now.getSaintOfDay() + "]");
