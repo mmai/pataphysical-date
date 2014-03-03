@@ -1,15 +1,12 @@
-pataphysical-date
-=================
+#pataphysical-date
 
-A javascript library which convert Gregorian dates to the "Pataphysical Calendar":"http://user.icx.net/~richmond/rsr/pataphysique/pataphysique.html"
+A javascript library which convert Gregorian dates to the [Pataphysical Calendar](http://user.icx.net/~richmond/rsr/pataphysique/pataphysique.html)
 
-Usage
------
+##Usage
 
 pataphysical-date works in Node.js and the browser. It also provide a command line utility.
 
-Node.js
--------
+###Node.js
 
 ```npm install pataphysical-date```
 
@@ -17,13 +14,9 @@ Node.js
 require('pataphysical-date');
 var pnow = new PataphysicalDate();
 console.log('Today is ' + pnow.toString());
-
-var pdate = new PataphysicalDate(new Date("1903-02-21"));
-console.log('Raymond Queneau est né le ' + pdate.toString());
 ```
 
-Browser
--------
+###Browser
 
 ```html
 <script src="PataphysicalDate.js"></script>
@@ -40,17 +33,16 @@ pataphysical-date is available as a bower package :
 <script src="bower-components/pataphysical-date/PataphysicalDate.js"></script>
 ```
 
-Command line
-------------
-The npm package provide the 'patadate' command which displays the currend date according to the Pataphysical calendar.
+###Command line
+The npm package provide the 'patadate' command which displays the current date according to the Pataphysical calendar.
 
 ```bash
 npm install -g pataphysical-date
 patadate
 ```
 
-API
----
+###API
+
 The API is very limited at the moment : you can display the current date, the saint of the day, and convert a gregorian date :
 
 ```javascript
