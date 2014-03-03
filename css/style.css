@@ -1,0 +1,26 @@
+body {
+ background-image: url(../images/ubu.png);
+ background-repeat:no-repeat;
+ background-position: 0 50px;
+ font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+}
+
+.aujourdhui {
+    text-align:center;
+    margin-top: 50px;
+    margin-left: 350px;
+    padding:10px;
+    width:350px;
+/*    background-color:#eeeeee;*/
+    border-radius: 20px;
+}
+
+.links {
+    text-align:center;
+    margin-top: 30px;
+    margin-left: 350px;
+    padding:10px;
+    width:350px;
+/*    background-color:#eeeeee;*/
+    border-radius: 20px;
+}

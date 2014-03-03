@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="utf-8">
-<script src="bower_components/pataphysical-date/PataphysicalDate.js"></script>
-<script language="javascript">
-var pnow = new PataphysicalDate();
-  document.write("Nous sommes aujourd'hui le " + pnow.toString() + " ( " + pnow.getSaintOfDay() + " )");
-</script>
-</head>
-<body></body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendrier Pataphysique</title>
+    <script src="PataphysicalDate.js"></script>
+    <script language="javascript">
+        var pnow = new PataphysicalDate();
+    </script>
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+
+      <div class="header">
+          <h2>Calendrier Pataphysique</h2>
+      </div>
+
+          <p class="lead aujourdhui"> Nous sommes aujourd'hui le<br> 
+               <strong><span class="patadate"><script language="javascript">document.write(pnow.toString());</script></span></strong><br>
+              <em><span class="saint"><script language="javascript">document.write(pnow.getSaintOfDay());</script></span></em>
+          </p>
+          <div class="links">
+              <a href="https://twitter.com/calpataphysique"><img src="images/webicon-twitter.png"></a>
+              <a href="https://github.com/mmai/pataphysical-date"><img src="images/webicon-github.png"></a>
+          </div>
+
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>
