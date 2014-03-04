@@ -1,26 +1,48 @@
 body {
- background-image: url(../images/ubu.png);
- background-repeat:no-repeat;
- background-position: 0 50px;
- font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
-}
+  background-image: url(../images/ubu.png);
+  background-repeat: no-repeat;
+  background-position: 0 80px;
+  font-family: museo-slab,Georgia,"Times New Roman",Times,serif; }
 
-.aujourdhui {
-    text-align:center;
+.container {
+  max-width: 700px;
+  margin-left: 0; }
+
+.header h2 {
+  color: #444;
+  border-style: solid;
+  border-width: 0px 0px thin 0px;
+  padding: 10px;
+  margin-left: 0px;
+  margin-top: 0px; }
+
+.footer {
+  margin-right: 0px;
+  margin-left: auto; }
+  .footer img {
+    margin-bottom: 5px; }
+
+a {
+  color: black; }
+
+.decale {
+  width: 480px;
+  text-align: right;
+  margin-left: auto; }
+  .decale .aujourdhui {
+    text-align: center;
     margin-top: 50px;
-    margin-left: 350px;
-    padding:10px;
-    width:350px;
-/*    background-color:#eeeeee;*/
-    border-radius: 20px;
-}
-
-.links {
-    text-align:center;
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px; }
+  .decale .links {
+    text-align: left;
+    margin-left: auto;
+    margin-right: 0px;
     margin-top: 30px;
-    margin-left: 350px;
-    padding:10px;
-    width:350px;
-/*    background-color:#eeeeee;*/
-    border-radius: 20px;
-}
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: white; }

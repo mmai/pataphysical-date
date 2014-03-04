@@ -1,0 +1,31 @@
+$top: 50px;
+$left: 300px;
+$content-width: 350px;
+$border-radius: 16px;
+
+body {
+ background-image: url(../images/ubu.png);
+ background-repeat:no-repeat;
+ background-position: 0 50px;
+ font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+}
+
+.aujourdhui {
+    text-align:center;
+    margin-top: $top;
+    margin-left: $left;
+    padding:10px;
+    width: $content-width;
+/*    background-color:#eeeeee;*/
+    border-radius: $border-radius;
+}
+
+.links {
+    text-align:center;
+    margin-top: 30px;
+    margin-left: $left;
+    padding:10px;
+    width:$content-width;
+/*    background-color:#eeeeee;*/
+    border-radius: $border-radius;
+}

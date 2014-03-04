@@ -1,0 +1,69 @@
+$top: 50px;
+$content-width: 400px;
+$border-radius: 10px;
+
+body {
+ background-image: url(../images/ubu.png);
+ background-repeat:no-repeat;
+ background-position: 0 80px;
+ font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+}
+
+.container {
+    max-width: 700px;
+    margin-left: 0;
+}
+
+.header {
+    h2 {
+        color:#444;
+        border-style:solid;
+        border-width:0px 0px thin 0px;
+        padding:10px;
+        margin-left:0px;
+        margin-top:0px;
+    }
+}
+
+.footer {
+    margin-right:0px;
+    margin-left:auto;
+
+    img {
+        margin-bottom: 5px;
+    }
+}
+
+a {
+    color:black;
+}
+
+$left: 300px;
+.decale {
+    width: 480px;
+    text-align: right;
+    margin-left: auto;
+
+    .aujourdhui {
+        text-align:center;
+        margin-top: $top;
+        margin-left: auto;
+        margin-right: 10px;
+        padding:10px;
+        width: $content-width;
+        border-radius: $border-radius;
+        //background-color:#DDD;
+    }
+
+    .links {
+        text-align:left;
+        margin-left: auto;
+        margin-right: 0px;
+        margin-top: 30px;
+        padding:10px;
+        width:$content-width;
+        border-radius: $border-radius;
+        background-color:white;
+    }
+}
+

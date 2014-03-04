@@ -5,12 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Calendrier Pataphysique</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/pickadate/lib/compressed/picker.js"></script>
+    <script src="bower_components/pickadate/lib/compressed/picker.date.js"></script>
+    <script src="bower_components/pickadate/lib/compressed/legacy.js"></script>
+    <script src="bower_components/pickadate/lib/compressed/translations/fr_FR.js"></script>
     <script src="PataphysicalDate.js"></script>
     <script language="javascript">
+        $(document).ready(function(){
+                $('.datepicker').pickadate();
+                });
         var pnow = new PataphysicalDate();
+
     </script>
-    <!-- Bootstrap -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/pickadate/lib/compressed/themes/default.css" rel="stylesheet">
+    <link href="bower_components/pickadate/lib/compressed/themes/default.date.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -21,25 +31,31 @@
     <![endif]-->
   </head>
   <body>
+      <div class="header">
+          <h2>Calendrier 'Pataphysique</h2>
+      </div>
   <div class="container">
 
-      <div class="header">
-          <h2>Calendrier Pataphysique</h2>
-      </div>
-
+      <div  class="decale">
           <p class="lead aujourdhui"> Nous sommes aujourd'hui le<br> 
                <strong><span class="patadate"><script language="javascript">document.write(pnow.toString());</script></span></strong><br>
               <em><span class="saint"><script language="javascript">document.write(pnow.getSaintOfDay());</script></span></em>
           </p>
+<!--           <input type="text" class="datepicker" placeholder="Convertissez une date"> -->
+          <div class="footer">
           <div class="links">
-              <a href="https://twitter.com/calpataphysique"><img src="images/webicon-twitter.png"></a>
-              <a href="https://github.com/mmai/pataphysical-date"><img src="images/webicon-github.png"></a>
-          </div>
+              <a href="https://twitter.com/calpataphysique">
+                  <img src="images/Twitter.png"> Suivez le compte Twitter
+              </a><br>
+              <a href="https://github.com/mmai/pataphysical-date">
+                  <img src="images/GitHub.png"> Star the project on Github
+              </a>
+              </div>
+              </div>
+      </div>
 
   </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
