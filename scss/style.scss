@@ -52,7 +52,7 @@ $left: 300px;
         padding:10px;
         width: $content-width;
         border-radius: $border-radius;
-        //background-color:#DDD;
+        background-color:white;
     }
 
     .links {
@@ -60,10 +60,42 @@ $left: 300px;
         margin-left: auto;
         margin-right: 0px;
         margin-top: 30px;
-        padding:10px;
+        //padding:10px;
         width:$content-width;
-        border-radius: $border-radius;
+        //border-radius: $border-radius;
         background-color:white;
+    }
+}
+
+$btn-transition: 0.2s; 
+$btn-radius: 2px;
+.paper-button { 
+    display: inline-block;
+    -webkit-transition: box-shadow $btn-transition, background $btn-transition;
+    transition: box-shadow $btn-transition, background $btn-transition;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    padding: 14px 14px 12px;
+    border-top-left-radius: $btn-radius;
+    border-top-right-radius: $btn-radius;
+    border-bottom-right-radius: $btn-radius;
+    border-bottom-left-radius: $btn-radius;
+    outline: none;
+    white-space: nowrap;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.06em;
+    color: inherit;
+    vertical-align: middle;
+    font-weight: normal;
+    //text-transform: uppercase;
+
+    &:hover, &.active {
+        text-decoration: none;
+        background: #fff;
+        box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.1), 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
     }
 }
 
