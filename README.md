@@ -1,10 +1,10 @@
 #pataphysical-date
 
-A javascript library which convert Gregorian dates to the [Pataphysical Calendar](http://user.icx.net/~richmond/rsr/pataphysique/pataphysique.html)
+A javascript library which converts Gregorian dates to the [Pataphysical Calendar](http://user.icx.net/~richmond/rsr/pataphysique/pataphysique.html)
 
 ##Usage
 
-pataphysical-date works in Node.js and the browser. It also provide a command line utility.
+pataphysical-date works in Node.js and the browser. It also provides a command line utility.
 
 ###Node.js
 
