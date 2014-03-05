@@ -41,9 +41,11 @@ a {
   .decale .dateconvert {
     width: 400px;
     margin-left: auto;
-    text-align: center; }
+    text-align: center;
+    font-family: "Helvetica Neue", sans-serif; }
     .decale .dateconvert input {
-      width: 150px; }
+      width: 150px;
+      cursor: default; }
   .decale .links {
     width: 400px;
     margin-left: auto;

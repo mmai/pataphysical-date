@@ -13,22 +13,22 @@
     <script src="bower_components/pickadate/lib/compressed/translations/fr_FR.js"></script>
     <script src="PataphysicalDate.js"></script>
     <script language="javascript">
-
         $(document).ready(function(){
            var picker = $('.datepicker').pickadate({
                onSet: function(obj){
                  if (obj.hasOwnProperty('select')){
                    updatePDate(new Date(obj.select));
                  }
+               },
+               onClose: function() {
+                 $('.datepicker').blur();
                }
            });
-           //updatePDate(new Date());
            picker.pickadate('picker').set('select', Date.now());
         });
 
         function updatePDate(gDate){
             var pDate = new PataphysicalDate(gDate);
-
             var html = " ";
             if (gDate.toDateString() === (new Date()).toDateString()){
                 html += "Nous sommes aujourd'hui le"
@@ -39,9 +39,7 @@
             html += "<br><strong><span class='patadate'>" + pDate.toString() + "</span></strong><br>";
             html += "<em><span class='saint'>" + pDate.getSaintOfDay() + "</span></em>";
             document.querySelector('.aujourdhui').innerHTML = html;
-
         }
-
     </script>
     <link href="bower_components/pickadate/lib/compressed/themes/default.css" rel="stylesheet">
     <link href="bower_components/pickadate/lib/compressed/themes/default.date.css" rel="stylesheet">
