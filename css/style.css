@@ -30,20 +30,27 @@ a {
   text-align: right;
   margin-left: auto; }
   .decale .aujourdhui {
+    width: 400px;
+    margin-left: auto;
     text-align: center;
     margin-top: 50px;
-    margin-left: auto;
     margin-right: 10px;
     padding: 10px;
-    width: 400px;
     border-radius: 10px;
     background-color: white; }
-  .decale .links {
-    text-align: left;
+  .decale .dateconvert {
+    width: 400px;
     margin-left: auto;
+    text-align: center; }
+    .decale .dateconvert input {
+      width: 150px; }
+  .decale .links {
+    width: 400px;
+    margin-left: auto;
+    text-align: center;
+    text-align: left;
     margin-right: 0px;
     margin-top: 30px;
-    width: 400px;
     background-color: white; }
 
 .paper-button {
@@ -71,3 +78,10 @@ a {
     text-decoration: none;
     background: #fff;
     box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.1), 0px 2px 10px 0px rgba(0, 0, 0, 0.1); }
+
+.form-control {
+  display: inline; }
+  .form-control:focus {
+    border-color: #ccc;
+    -webkit-box-shadow: none;
+    box-shadow: none; }

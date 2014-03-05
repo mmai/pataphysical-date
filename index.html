@@ -13,15 +13,39 @@
     <script src="bower_components/pickadate/lib/compressed/translations/fr_FR.js"></script>
     <script src="PataphysicalDate.js"></script>
     <script language="javascript">
+
         $(document).ready(function(){
-                $('.datepicker').pickadate();
-                });
-        var pnow = new PataphysicalDate();
+           var picker = $('.datepicker').pickadate({
+               onSet: function(obj){
+                 if (obj.hasOwnProperty('select')){
+                   updatePDate(new Date(obj.select));
+                 }
+               }
+           });
+           //updatePDate(new Date());
+           picker.pickadate('picker').set('select', Date.now());
+        });
+
+        function updatePDate(gDate){
+            var pDate = new PataphysicalDate(gDate);
+
+            var html = " ";
+            if (gDate.toDateString() === (new Date()).toDateString()){
+                html += "Nous sommes aujourd'hui le"
+            } else {
+                html += "Le " + $('.datepicker').get(0).value + " est en réalité le";
+            }
+
+            html += "<br><strong><span class='patadate'>" + pDate.toString() + "</span></strong><br>";
+            html += "<em><span class='saint'>" + pDate.getSaintOfDay() + "</span></em>";
+            document.querySelector('.aujourdhui').innerHTML = html;
+
+        }
 
     </script>
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="bower_components/pickadate/lib/compressed/themes/default.css" rel="stylesheet">
     <link href="bower_components/pickadate/lib/compressed/themes/default.date.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -38,20 +62,13 @@
   <div class="container">
 
       <div  class="decale">
-          <p class="lead aujourdhui"> Nous sommes aujourd'hui le<br> 
-               <strong><span class="patadate"><script language="javascript">document.write(pnow.toString());</script></span></strong><br>
-              <em><span class="saint"><script language="javascript">document.write(pnow.getSaintOfDay());</script></span></em>
-          </p>
-<!--           <input type="text" class="datepicker" placeholder="Convertissez une date"> -->
+          <p class="lead aujourdhui"></p>
+          <div class="dateconvert">
+              Convertir une date :<br>
+              <input type="text" class="datepicker form-control" placeholder="Convertissez une date">
+          </div>
           <div class="footer">
           <div class="links">
-<!--               <a href="https://twitter.com/calpataphysique"> -->
-<!--                   <img src="images/Twitter.png"> Suivez le compte Twitter -->
-<!--               </a><br> -->
-<!--               <a href="https://github.com/mmai/pataphysical-date"> -->
-<!--                   <img src="images/GitHub.png"> Star the project on Github -->
-<!--               </a> -->
-
               <a href="https://twitter.com/intent/follow?screen_name=calpataphysique" title="Suivez @calpataphysique sur Twitter" class="paper-button"><img src="images/ic_social_twitter.png"> @calpataphysique</a>
       <a href="https://github.com/mmai/pataphysical-date" class="paper-button"><img src="images/ic_social_github.png"> /pataphysical-date</a>
               </div>
