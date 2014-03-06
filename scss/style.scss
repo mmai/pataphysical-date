@@ -61,10 +61,13 @@ $left: 300px;
 
     .dateconvert {
         @include center-right;
-        font-family: "Helvetica Neue", sans-serif;
-        input {
-            width:150px;
-            cursor:default;
+        form {
+            display:inline;
+            font-family: "Helvetica Neue", sans-serif;
+            input {
+                width:150px;
+                cursor:default;
+            }
         }
     }
 

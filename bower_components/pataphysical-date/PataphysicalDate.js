@@ -1,3 +1,9 @@
+/*
+ *  PataphysicalDate.js  -- A javascript library which convert Gregorian dates to the Pataphysical Calendar
+ *  Author:     Henri Bourcereau (henri AT bourcereau fr) 
+ *  URL:         https://github.com/mmai/pataphysical-date
+ */
+
 (function(exports){
 
         PataphysicalDate = function(date){

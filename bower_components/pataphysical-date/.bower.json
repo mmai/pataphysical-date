@@ -1,0 +1,31 @@
+{
+  "name": "pataphysical-date",
+  "version": "0.2.1",
+  "homepage": "https://github.com/mmai/pataphysical-date.git",
+  "authors": [
+    "Henri Bourcereau <henri@bourcereau.fr>"
+  ],
+  "description": "Display the date according to the Pataphysical Calendar",
+  "main": "./PataphysicalDate.js",
+  "keywords": [
+    "calendar",
+    "pataphysics"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "package.json"
+  ],
+  "_release": "0.2.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.1",
+    "commit": "0ebecefcb0eb0238a5cbcf277d6a197aff3ad831"
+  },
+  "_source": "git://github.com/mmai/pataphysical-date.git",
+  "_target": "~0.2.1",
+  "_originalSource": "pataphysical-date",
+  "_direct": true
+}
