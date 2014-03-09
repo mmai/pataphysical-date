@@ -14,17 +14,27 @@
     <script src="bower_components/pataphysical-date/PataphysicalDate.js"></script>
     <script language="javascript">
         $(document).ready(function(){
+           var req_date = new Date(get("date"));  ;
+
            var picker = $('.datepicker').pickadate({
                onSet: function(obj){
                  if (obj.hasOwnProperty('select')){
-                   updatePDate(new Date(obj.select));
+                   var sel_date = new Date(obj.select);
+                   if (req_date.toString() != sel_date.toString()){
+                      document.location.href = 'index.html?date=' + sel_date.getFullYear() + "-" + ("00" + (sel_date.getMonth() + 1)).substr(-2, 2) + "-" + ("00" + sel_date.getDate()).substr(-2,2);
+                   }
+                   updatePDate(sel_date);
                  }
                },
                onClose: function() {
                  $('.datepicker').blur();
                }
            });
-           picker.pickadate('picker').set('select', Date.now());
+
+           if (req_date.toString() === 'Invalid Date'){
+                req_date = new Date();
+           }
+           picker.pickadate('picker').set('select', req_date);
         });
 
         function updatePDate(gDate){
@@ -39,6 +49,11 @@
             html += "<br><strong><span class='patadate'>" + pDate.toString() + "</span></strong><br>";
             html += "<em><span class='saint'>" + pDate.getSaintOfDay() + "</span></em>";
             document.querySelector('.aujourdhui').innerHTML = html;
+        }
+
+        function get(name){
+            if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+                return decodeURIComponent(name[1]);
         }
     </script>
     <link href="bower_components/pickadate/lib/compressed/themes/default.css" rel="stylesheet">
