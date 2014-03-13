@@ -44,6 +44,20 @@ describe('PataphysicalDate', function(){
               })
       });
 
+  describe('getMonthName', function(){
+          it('should give the month name', function(){
+                  pata = new PataphysicalDate(new Date("2015-03-01"));
+                  pata.getMonthName().should.equal("Pédale");
+              })
+      });
+
+  describe('getDayName', function(){
+          it('should give the day name', function(){
+                  pata = new PataphysicalDate(new Date("2015-03-01"));
+                  pata.getDayName().should.equal("Samedi");
+              })
+      });
+
   describe('toString()', function(){
     it('should return a valid string', function(){
             pata = new PataphysicalDate();
@@ -51,9 +65,26 @@ describe('PataphysicalDate', function(){
             pata.toString().should.be.a('String');
         });
 
-    it('should return a the correct date representation', function(){
+    it('should return the correct date representation', function(){
             pata = new PataphysicalDate(new Date("2014-03-02"));
             pata.toString().should.equal('Dimanche 8 Pédale 141');
+        });
+
+    it('should display "1er" for the first day of month', function(){
+            pata = new PataphysicalDate(new Date("2014-02-23"));
+            pata.toString().should.equal('Dimanche 1er Pédale 141');
+        });
+  });
+
+  describe('getDayImportance', function(){
+    it('should return a valid string', function(){
+            pata = new PataphysicalDate();
+            pata.getDayImportance().should.be.a('String');
+        });
+
+    it('should return the correct importance of the day', function(){
+            pata = new PataphysicalDate(new Date("2014-02-23"));
+            pata.getDayImportance().should.equal('fête suprême tierce');
         });
   });
 
