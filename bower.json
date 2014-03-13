@@ -1,11 +1,11 @@
 {
   "name": "pataphysical-date",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": "https://github.com/mmai/pataphysical-date.git",
   "authors": [
     "Henri Bourcereau <henri@bourcereau.fr>"
   ],
-  "description": "Display the date according to the Pataphysical Calendar",
+  "description": "Display the date according to the pataphysical calendar",
   "main": "./PataphysicalDate.js",
   "keywords": [
     "calendar",

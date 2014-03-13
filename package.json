@@ -1,7 +1,7 @@
 {
   "name": "pataphysical-date",
-  "version": "0.2.1",
-  "description": "Display the date according to the Pataphysical Calendar",
+  "version": "0.3.0",
+  "description": "Display the date according to the pataphysical calendar",
   "license": "MIT",
   "author": "Henri Bourcereau",
   "repository": {"type":"git", "url":"https://github.com/mmai/pataphysical-date.git"},
