@@ -43,8 +43,6 @@ patadate
 
 ###API
 
-The API is very limited at the moment : you can display the current date, the saint of the day, and convert a gregorian date :
-
 ```javascript
 //Display current date
 var pnow = new PataphysicalDate(); //Current date by default
@@ -52,9 +50,27 @@ console.log('Today is ' + pnow.toString());
 
 //Convert a date
 var pdate = new PataphysicalDate(new Date("1903-02-21"));
-console.log('Raymond Queneau est né le ' + pdate.toString());
+console.log('Raymond Queneau est né le ' + pdate.toString()); // Raymond Queneau est né le Vendredi 27 Gueules 30
+
+//Get the year
+console.log(pdate.getFullYear()); // 30
+
+//Get the month (begins at 0, like the javascript Date object)
+console.log(pdate.getMonth()); // 5 
+
+//Get the day
+console.log(pdate.getDay()); // 27
+
+//Get the month name
+console.log(pdate.getMonthName()); // Gueules
+
+//Get the day name
+console.log(pdate.getDayName()); // Vendredi
 
 //Get the saint of the day
-console.log(pdate.getSaintOfDay());
+console.log(pdate.getSaintOfDay()); // Ste Tabagie, cosmogène
+
+//Get the importance of the day
+console.log(pdate.getDayImportance()); // fête suprême quarte
 
 ```
