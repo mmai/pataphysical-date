@@ -50,8 +50,9 @@
                 html += "Le " + $('.datepicker').get(0).value + " est en réalité le";
             }
 
-            html += "<br><strong><span class='patadate'>" + pDate.toString() + "</span></strong><br>";
-            html += "<em><span class='saint'>" + pDate.getSaintOfDay() + "</span></em>";
+            html += "<br><strong><span class='patadate'>" + pDate.toString() + "</span></strong>";
+            html += "<br><em><span class='saint'>" + pDate.getSaintOfDay() + "</span></em>";
+            html += "<br><span class='importance'>" + pDate.getDayImportance() + "</span>";
             document.querySelector('.aujourdhui').innerHTML = html;
         }
 

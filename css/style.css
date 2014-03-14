@@ -38,6 +38,8 @@ a {
     padding: 10px;
     border-radius: 10px;
     background-color: white; }
+  .decale .importance {
+    font-size: 14px; }
   .decale .dateconvert {
     width: 400px;
     margin-left: auto;
