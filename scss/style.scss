@@ -82,6 +82,7 @@ $left: 300px;
 
 $btn-transition: 0.2s; 
 $btn-radius: 2px;
+
 .paper-button { 
     display: inline-block;
     -webkit-transition: box-shadow $btn-transition, background $btn-transition;
@@ -103,13 +104,12 @@ $btn-radius: 2px;
     color: inherit;
     vertical-align: middle;
     font-weight: normal;
-    //text-transform: uppercase;
 
-    &:hover, &.active {
-        text-decoration: none;
-        background: #fff;
-        box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.1), 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
-    }
+//    &:hover, &.active {
+//        text-decoration: none;
+//        background: #fff;
+//        box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.1), 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+//    }
 }
 
 .form-control {

@@ -19,6 +19,8 @@
            var req_date = new Date(get("date"));  ;
 
            var picker = $('.datepicker').pickadate({
+               selectMonths: true,
+               selectYears: true,
                onSet: function(obj){
                  if (obj.hasOwnProperty('select')){
                    var sel_date = new Date(obj.select);
