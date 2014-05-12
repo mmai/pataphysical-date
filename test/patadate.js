@@ -5,6 +5,26 @@ require('../PataphysicalDate');
 describe('PataphysicalDate', function(){
   var pata;
 
+  describe('PataphysicalDate()', function(){
+          it('should accept no arguments', function(){
+                  pata = new PataphysicalDate();
+                  pata.gregorian.should.be.a('Date');
+              });
+          it('should accept valid dates', function(){
+                  pata = new PataphysicalDate(new Date("1873-09-08"));
+                  pata.gregorian.should.be.a('Date');
+              });
+          it('should accept valid string date representation', function(){
+                  pata = new PataphysicalDate("1873-09-08");
+                  pata.gregorian.should.be.a('Date');
+              });
+          it('should reject invalid dates', function(){
+                  (function (){
+                      pata = new PataphysicalDate(new Date("garbage"));
+                  }).should.throw(/Invalid input date/);
+          });
+  });
+
   describe('getFullYear', function(){
           it('should give the year', function(){
                   pata = new PataphysicalDate(new Date("1873-09-08"));

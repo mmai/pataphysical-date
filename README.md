@@ -39,6 +39,7 @@ The npm package provide the 'patadate' command which displays the current date a
 ```bash
 npm install -g pataphysical-date
 patadate
+patadate 2014-05-28
 ```
 
 ###API
@@ -51,6 +52,9 @@ console.log('Today is ' + pnow.toString());
 //Convert a date
 var pdate = new PataphysicalDate(new Date("1903-02-21"));
 console.log('Raymond Queneau est né le ' + pdate.toString()); // Raymond Queneau est né le Vendredi 27 Gueules 30
+
+//You can directly use a string parameter, it will be automatically converted to a Date object :
+pdate = new PataphysicalDate("1903-02-21");
 
 //Get the year
 console.log(pdate.getFullYear()); // 30

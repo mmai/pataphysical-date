@@ -7,7 +7,17 @@
 (function(exports){
 
         PataphysicalDate = function(date){
-            this.gregorian = typeof(date) !== 'undefined' ? date : new Date();
+            if (typeof(date) === 'undefined'){
+                date = new Date();
+            } else if (typeof(date) === 'string'){
+                date = new Date(date);
+            }
+
+            if (!(date instanceof Date) || date.toString() === 'Invalid Date'){
+                throw new Error('Invalid input date');
+            }
+
+            this.gregorian = date;
             var pDate = calculateDate(this.gregorian);
 
             this.year = pDate.year;
