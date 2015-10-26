@@ -1,7 +1,7 @@
 body {
-  background-image: url(../images/ubu.png);
-  background-repeat: no-repeat;
-  background-position: 0 80px;
+  /* background-image: url(../images/ubu.png); */
+  /* background-repeat: no-repeat; */
+  /* background-position: 0 80px; */
   font-family: museo-slab,Georgia,"Times New Roman",Times,serif; }
 
 .container {
@@ -25,11 +25,7 @@ body {
 a {
   color: black; }
 
-.decale {
-  width: 480px;
-  text-align: right;
-  margin-left: auto; }
-  .decale .aujourdhui {
+  .aujourdhui {
     width: 400px;
     margin-left: auto;
     text-align: center;
@@ -38,19 +34,19 @@ a {
     padding: 10px;
     border-radius: 10px;
     background-color: white; }
-  .decale .importance {
+  .importance {
     font-size: 14px; }
-  .decale .dateconvert {
+  .dateconvert {
     width: 400px;
     margin-left: auto;
     text-align: center; }
-    .decale .dateconvert form {
+    .dateconvert form {
       display: inline;
       font-family: "Helvetica Neue", sans-serif; }
-      .decale .dateconvert form input {
+      .dateconvert form input {
         width: 150px;
         cursor: default; }
-  .decale .links {
+  .links {
     width: 400px;
     margin-left: auto;
     text-align: center;
