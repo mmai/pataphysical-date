@@ -26,7 +26,6 @@ a {
   color: black; }
 
   .aujourdhui {
-    width: 400px;
     margin-left: auto;
     text-align: center;
     margin-top: 50px;
@@ -37,7 +36,6 @@ a {
   .importance {
     font-size: 14px; }
   .dateconvert {
-    width: 400px;
     margin-left: auto;
     text-align: center; }
     .dateconvert form {
@@ -47,7 +45,6 @@ a {
         width: 150px;
         cursor: default; }
   .links {
-    width: 400px;
     margin-left: auto;
     text-align: center;
     text-align: left;
