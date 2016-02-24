@@ -13,6 +13,9 @@ describe('PataphysicalDate', function(){
           it('should accept valid dates', function(){
                   pata = new PataphysicalDate(new Date("1873-09-08"));
                   pata.gregorian.should.be.a('Date');
+
+                  pata = new PataphysicalDate(new Date("0001-01-01"));
+                  pata.gregorian.should.be.a('Date');
               });
           it('should accept valid string date representation', function(){
                   pata = new PataphysicalDate("1873-09-08");
@@ -48,6 +51,9 @@ describe('PataphysicalDate', function(){
 
                   pata = new PataphysicalDate(new Date("2015-03-23"));
                   pata.getMonth().should.equal(7);
+
+                  pata = new PataphysicalDate(new Date("0001-01-01"));
+                  pata.getMonth().should.equal(4);
               });
       });
 

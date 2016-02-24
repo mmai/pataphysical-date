@@ -76,10 +76,10 @@
             var ref;
             if ((gMonth > 9) || (gMonth==9 && gDay > 7)) {
                 pYear = gYear - 1872;
-                ref = new Date(gYear+"-09-08");
+                ref = new Date(gYear, 8, 8);
             } else {
                 pYear = gYear - 1873;
-                ref = new Date(gYear-1+"-09-08");
+                ref = new Date(gYear-1, 8, 8);
             }
 
             var days = dateDiff(date, ref); 
