@@ -19,7 +19,7 @@ console.log('Today is ' + pnow.toString());
 ###Browser
 
 ```html
-<script src="PataphysicalDate.js"></script>
+<script src="PataphysicalDate.min.js"></script>
 <script>
   var pnow = new PataphysicalDate();
   document.write('Today is ' + pnow.toString());
