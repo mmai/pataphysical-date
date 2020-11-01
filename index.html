@@ -47,7 +47,7 @@
             if (gDate.toDateString() === (new Date()).toDateString()){
                 html += "Nous sommes aujourd'hui le"
             } else {
-                html += "Le " + $('.datepicker').get(0).value + " est en réalité le";
+                html += "Le " + $('.datepicker').get(0).value + " vulgaire est en réalité le";
             }
 
             html += "<br><strong><span class='patadate'>" + pDate.toString() + "</span></strong>";
@@ -65,6 +65,15 @@
     <link href="bower_components/pickadate/lib/compressed/themes/default.date.css" rel="stylesheet">
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <style>
+      .dateconvert form input {
+        width: 170px;
+      }
+      .picker__select--month, .picker__select--year {
+        height: 2.3em;
+      }
+    </style>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
